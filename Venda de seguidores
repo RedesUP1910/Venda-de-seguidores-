@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venda de Seguidores</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #222;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    .planos {
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, select, textarea {
+      padding: 0.7rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+    button {
+      padding: 0.7rem;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Venda de Seguidores</h1>
+    <p>Entrega rápida via Pix | 100% Garantido</p>
+  </header>
+
+  <nav>
+    <a href="#planos">Planos</a>
+    <a href="#pedido">Fazer Pedido</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="planos">
+    <h2>Planos e Preços</h2>
+    <div class="planos">
+      <h3>TikTok</h3>
+      <ul>
+        <li>100 Seguidores - R$ 2,00</li>
+        <li>Cada 100 Curtidas - R$ 2,00</li>
+        <li>100 Visualizações em vídeo - R$ 1,00</li>
+        <li>1K Visualizações em live (15min) - R$ 4,00</li>
+      </ul>
+    </div>
+    <div class="planos">
+      <h3>Instagram</h3>
+      <ul>
+        <li>100 Seguidores - R$ 2,00</li>
+        <li>100 Curtidas - R$ 1,30</li>
+        <li>100 Visualizações em reel - R$ 1,50</li>
+        <li>1K Visualizações em live - R$ 2,00</li>
+      </ul>
+    </div>
+    <div class="planos">
+      <h3>Twitch</h3>
+      <ul>
+        <li>100 Seguidores - R$ 2,00</li>
+        <li>100 Visualizações em live (30min) - R$ 15,00</li>
+      </ul>
+    </div>
+    <div class="planos">
+      <h3>YouTube</h3>
+      <ul>
+        <li>100 Inscritos - R$ 5,00</li>
+        <li>100 Likes - R$ 1,50</li>
+        <li>Visualização em live (15min) - R$ 2,50</li>
+        <li>100 Visualizações em vídeo - R$ 1,90</li>
+      </ul>
+    </div>
+    <p>Todos os serviços são entregues no mesmo dia e garantidos em até 24h.</p>
+  </section>
+
+  <section id="pedido">
+    <h2>Fazer Pedido</h2>
+    <form id="pedidoForm">
+      <input type="text" placeholder="Seu nome" required>
+      <input type="text" placeholder="Perfil ou link da conta" required>
+      <select required>
+        <option value="">Escolha uma plataforma</option>
+        <option value="TikTok">TikTok</option>
+        <option value="Instagram">Instagram</option>
+        <option value="Twitch">Twitch</option>
+        <option value="YouTube">YouTube</option>
+      </select>
+      <textarea placeholder="Digite aqui o que deseja comprar (ex: 100 seguidores TikTok, 200 likes Instagram...)" required></textarea>
+      <button type="submit">Enviar Pedido via WhatsApp</button>
+    </form>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Pagamento via Pix</p>
+    <p>WhatsApp: <a href="https://wa.me/SEUNUMERO" target="_blank">Clique aqui para falar conosco</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Venda de Seguidores - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    document.getElementById("pedidoForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const inputs = e.target.elements;
+      const nome = inputs[0].value;
+      const perfil = inputs[1].value;
+      const plataforma = inputs[2].value;
+      const pedido = inputs[3].value;
+      const mensagem = `Olá, meu nome é ${nome}. Quero comprar:
+Plataforma: ${plataforma}
+Perfil: ${perfil}
+Pedido: ${pedido}`;
+      const numero = "SEUNUMERO"; // Substitua pelo número com DDI, ex: 5591999999999
+      window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`);
+    });
+  </script>
+</body>
+</html>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <p>Pagamento via Pix</p>
+  <p>WhatsApp: <a href="https://wa.me/5511912193354" target="_blank">Clique aqui para falar conosco</a></p>
+  <p>Aqui está o QR Code para o pagamento via Pix:</p>
+  <img src="CAMINHO/DO/QR_CODE.png" alt="QR Code Pix" style="max-width: 200px; margin: 20px auto; display: block;" />
+</section>
+
